@@ -25,3 +25,18 @@ model Technology {
 
   @@map("technologies")
 }
+
+model Project {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String
+  images      String[]
+  level       Int
+  type        String
+  highlight   Boolean  @default(false)
+  repository  String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("projects")
+}
