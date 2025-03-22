@@ -23,6 +23,8 @@ model Technology {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
+  projects Project[]
+
   @@map("technologies")
 }
 
@@ -37,6 +39,8 @@ model Project {
   repository  String
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
+
+  technologies Technology[]
 
   @@map("projects")
 }
