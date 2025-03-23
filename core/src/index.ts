@@ -1,2 +1,3 @@
-const test = 1
-export { test }
+export * from './project';
+export * from './technology';
+export * from './shared';
