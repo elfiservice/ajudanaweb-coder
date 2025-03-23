@@ -1,5 +1,5 @@
 import Technology from "../technology/Technology";
-import { Level } from "./Level";
+import { Level } from "./level";
 import { Type } from "./Type";
 
 export default interface Project {
