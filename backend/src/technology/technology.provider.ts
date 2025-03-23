@@ -9,4 +9,12 @@ export class TechnologyProvider {
     async getAll(): Promise<Technology[]> {
         return this.prisma.technology.findMany();
     }
+
+    async getHighlights(): Promise<Technology[]> {
+        return this.prisma.technology.findMany({
+            where: {
+                highlight: true,
+            },
+        });
+    }
 }

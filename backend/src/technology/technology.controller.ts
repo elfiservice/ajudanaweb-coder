@@ -10,4 +10,9 @@ export class TechnologyController {
     async getAll(): Promise<Technology[]> {
         return this.provider.getAll();
     }
+
+    @Get('highlights')
+    async getHighlights(): Promise<Technology[]> {
+        return this.provider.getHighlights();
+    }
 }
